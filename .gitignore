@@ -1,0 +1,6 @@
+.git
+.idea
+.env
+back/node_modules
+front/node_modules
+skarr_pro_db

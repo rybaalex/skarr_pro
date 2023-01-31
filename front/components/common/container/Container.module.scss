@@ -1,0 +1,12 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.no_padding {
+  padding: 0;
+}

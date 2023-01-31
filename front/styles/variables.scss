@@ -1,0 +1,33 @@
+$colors: (
+        black: #000,
+        border: #e1e1e1,
+        bredcrumbs_no_link: #BDBDBD,
+        bredcrumbs: #7D7D7D,
+        bredcrumbs_hover: #BDBDBD,
+        dark: #212121,
+        white: #FFF,
+        lightgreen: #2E6143,
+        green: #009247,
+        gray: #505050,
+        error: #ff0000,
+        text:#212121,
+        text-hover:#60955B,
+        shadow: #a5a5a5,
+);
+
+$screenWidth: (
+        pc: 1920px,
+        tablet: 1300px,
+        ipad: 1024px,
+        phone: 768px,
+        SE: 400px,
+);
+
+
+@function screenWidth($key) {
+  @return map-get($map: $screenWidth, $key: $key);
+}
+
+@function color($key) {
+  @return map-get($map: $colors, $key: $key);
+}

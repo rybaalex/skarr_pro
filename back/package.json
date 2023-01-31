@@ -1,0 +1,27 @@
+{
+  "name": "web_studio",
+  "version": "1.0.0",
+  "description": "web_studio",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nodemon server.js",
+    "prod": "cross-env NODE_ENV=prod node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0",
+    "swagger-autogen": "^2.22.0",
+    "swagger-jsdoc": "5.0.1",
+    "swagger-ui-express": "^4.6.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.20"
+  }
+}
