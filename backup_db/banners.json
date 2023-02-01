@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "63d9237fcb4c2fd829729edd"
+  },
+  "description": "We create high quality user interface design",
+  "offers": [
+    {
+      "title": "UX/UI",
+      "url": "uxui"
+    },
+    {
+      "title": "PRODUCT",
+      "url": "product"
+    },
+    {
+      "title": "DASHBOARD",
+      "url": "dashboard"
+    },
+    {
+      "title": "graphic design",
+      "url": "graphicdegisn"
+    },
+    {
+      "title": "Mobile interface",
+      "url": "mobileinterfaces"
+    },
+    {
+      "title": "web app",
+      "url": "webapp"
+    },
+    {
+      "title": "branding",
+      "url": "branding"
+    },
+    {
+      "title": "industrial photography",
+      "url": "industrialphotography"
+    },
+    {
+      "title": "website development",
+      "url": "websitedevelopment"
+    }
+  ],
+  "button": [
+    {
+      "title": "HIRE US",
+      "url": "hireus"
+    },
+    {
+      "title": "Our cases"
+    }
+  ],
+  "images": [
+    {
+      "title": "images 1",
+      "url": "",
+      "sort": 10,
+      "published": true,
+      "images": "/url/"
+    },
+    {
+      "title": "img 2",
+      "url": "",
+      "sort": 20,
+      "published": true,
+      "images": "/url/"
+    }
+  ]
+}]

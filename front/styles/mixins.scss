@@ -12,11 +12,13 @@
     width: 300px;
   }
 
-  @mixin backgroundImage($bgSize: 100% 100%) {
-    background-repeat: no-repeat;
-    background-size: $bgSize;
-  }
-
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
   @mixin pcScreen {
     @media screen and (max-width: screenWidth(pc)) {
       @content;

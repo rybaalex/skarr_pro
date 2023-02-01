@@ -1,362 +1,73 @@
 @import 'styles/mixins.scss';
 @import 'styles/variables.scss';
 
-
-%smallSize {
-  width: 168px;
-}
-
-%maxSize {
-  width: 100%;
-}
-
-%context {
-  width: fit-content;
-}
-
-%colorGreen {
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 168px;
-  height: 42px;
-  background: #009247;
-  border-radius: 5px;
-  transition: all 0.3s;
-  color: #FFF;
-  &:hover {
-    background-color: #096709;
-  }
-}
-
-%colorWhite {
-  padding: 16px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 136.5%;
-  letter-spacing: 0.08em;
-  border: 2px solid #fff;
-  color: #FFF;
-  text-shadow: 4px 3px 6px rgb(0 0 0 / 31%);
-  border-radius: 10px;
-  transition: all 0.3s ease-in;
-  @media (max-width: 1100px) {
-    padding: 15px 50px;
-    width: 250px;
-  }
-
-  @include phoneScreen {
-    font-size: 16px;
-    padding: 10px 20px;
-    border: 1.5px solid #fff;
-    letter-spacing: 0.04em;
-  }
-  
-  &:hover {
-    background: #33953A;
-    border-color: #33953A;
-    box-shadow: 0 0 123px rgba(22, 131, 8, 0.6);
-  }
-}
-
-%colorLink {
-  background-color: transparent;
-  border: none;
-}
-
-.banner {
-  &__medium {
-    &_green {
-      @extend %colorGreen;
-      @include mediumSize;
-      position: relative;
-    }
-
-    &_white {
-      @extend %colorWhite;
-      @include mediumSize;
-    }
-
-    &_link {
-      @include mediumSize;
-      @extend %colorLink
-    }
-  }
-
-  &__large {
-    &_green {
-      @extend %colorGreen;
-      @include largeSize;
-    }
-
-    &_white {
-      @extend %colorWhite;
-      @include largeSize;
-
-    }
-
-    &_link {
-      @extend %colorLink
-
-    }
-  }
-
-  &__small {
-    @extend %smallSize;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__max {
-    @extend %maxSize;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__context {
-    @extend %context;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-}
-
-.industries{
-  div{
-    display: grid;
-    grid-template-columns: max-content max-content;
+.square {
+  &_white {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    color: white;
-    svg{
-      width: 22px;
-      height: 22px;
+    width: 100%;
+    background: color(white1);
+    border: 1px solid color(white1);
+    border-radius: (4px);
+    transition: all 0.3s;
+    padding: 13px 40px 11px;
+
+    &:hover {
       transition: all 0.3s;
-
-      path{
-        fill: white;
-      }
-    }
-    &:hover svg{
-      transform: translateX(5px);
-    }
-    span {
-      padding: 10px
-    }
-  }
-  &__medium {
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
+      background: #33953A;
+      border-color: #33953A;
+      box-shadow: 0 0 123px rgba(22, 131, 8, 0.6);
     }
   }
 
-  &__large {
-
-    &_green {
-      @extend %colorGreen;
-      @include largeSize;
-    }
-
-    &_white {
-      @extend %colorWhite;
-      @include largeSize;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__small {
-    @extend %smallSize;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__max {
-    @extend %maxSize;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__context {
-    @extend %context;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-}
-
-.news {
-  div {
-    display: grid;
-    grid-template-columns: max-content max-content;
+  &_black {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 4px;
+    text-transform: uppercase;
+    padding: 23px 40px 19px;
+    border: 1px solid color(black1);
+    border-radius: (6px);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: color(black1);
+    transition: all 0.3s;
 
-    span {
-      padding-right: 10px
-    }
-
-    svg {
+    &:hover {
       transition: all 0.3s;
+      color: color(white1);
+      background-color: color(black1);
     }
 
-    &:hover svg {
-      transform: translateX(5px);
-    }
-  }
-
-  text-align: left;
-  &__medium {
-    //@extend %mediumSize;
-
-    &_green {
-      @extend %colorGreen;
-      @include mediumSize;
-    }
-
-    &_white {
-      @extend %colorWhite;
-      @include mediumSize;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__large {
-
-    &_green {
-      @extend %colorGreen;
-      @include largeSize;
-    }
-
-    &_white {
-      @extend %colorWhite;
-      @include largeSize;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__small {
-    @extend %smallSize;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__max {
-    @extend %maxSize;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
-    }
-  }
-
-  &__context {
-    @extend %context;
-
-    &_green {
-      @extend %colorGreen;
-    }
-
-    &_white {
-      @extend %colorWhite;
-    }
-
-    &_link {
-      @extend %colorLink
+    &:first-child {
+      color: color(white1);
+      background-color: color(black1);
     }
   }
 }
+
+.chips {
+  &_black {
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 9px 18px 7px;
+    border: 1px solid color(black1);
+    border-radius: (23px);
+    transition: all 0.3s;
+
+    &:hover {
+      transition: all 0.3s;
+      color: color(white1);
+      background-color: color(black1);
+    }
+  }
+}
+
+
 

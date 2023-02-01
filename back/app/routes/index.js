@@ -1,5 +1,7 @@
 const navRoutes = require('./nav.routes');
-module.exports = function(app, db) {
+const bannerRoutes = require('./banner.routes');
+module.exports = function (app, db) {
     navRoutes(app, db);
+    bannerRoutes(app, db);
     // Тут, позже, будут и другие обработчики маршрутов
 };

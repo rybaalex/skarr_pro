@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "63d8b811cb4c2fd829729eda"
+  },
+  "title": "cases",
+  "url": "cases",
+  "sort": 10,
+  "published": true
+},{
+  "_id": {
+    "$oid": "63d8b852cb4c2fd829729edb"
+  },
+  "title": "stages",
+  "url": "stages",
+  "sort": 20,
+  "published": true
+}]

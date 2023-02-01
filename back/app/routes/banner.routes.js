@@ -1,15 +1,14 @@
-const NavController = require('../controllers/nav.controller');
-const router_name = "/api/v1/nav"
+const BannerController = require('../controllers/banner.controller');
+const router_name = "/api/v1/banner"
 module.exports = function (app, db) {
-
     /**
      * @swagger
-     * /navigation:
+     * /banner:
      *   get:
-     *     summary: Получение всех пунктов меню
+     *     summary: Получение данных о банерах на главной странице
      *     responses:
      *         '200':    # status code
-     *           description: Получение массива с пунктами меню
+     *           description:
      *           content:
      *             application/json:
      *               schema:
@@ -18,6 +17,6 @@ module.exports = function (app, db) {
      *
      */
     app.get(router_name, (req, res) => {
-        NavController.getNavigation(res, db).then();
+        BannerController.getBanner(res, db).then();
     })
 };
