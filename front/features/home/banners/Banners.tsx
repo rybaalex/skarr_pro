@@ -4,6 +4,7 @@ import {useGetBanner} from "service/list/getBanner";
 import Styles from "./Banners.module.scss"
 import {ButtonOfferItem} from "features/home/banners/ButtonOfferItem";
 import {ButtonItem} from "features/home/banners/ButtonItem";
+import {Slider} from "components/slider";
 
 const Banners: FC = () => {
     const [bannerData, setBannerData] = useState<IBannerResponse>();
@@ -18,18 +19,18 @@ const Banners: FC = () => {
             <div className={Styles.insidePadding}>
                 <div className={Styles.title}>{bannerData && bannerData.response.description}</div>
                 <div className={Styles.block_orders}>
-                    {bannerData&&!bannerData?.hasError && bannerData.response.offers.map(e => {
+                    {bannerData && !bannerData?.hasError && bannerData.response.offers.map(e => {
                         return <ButtonOfferItem {...e}/>
                     })}
                 </div>
                 <div className={Styles.block_button}>
-                    {bannerData&&!bannerData?.hasError && bannerData.response.button.map(e => {
+                    {bannerData && !bannerData?.hasError && bannerData.response.button.map(e => {
                         return <ButtonItem {...e}/>
                     })}
                 </div>
             </div>
         </div>
-        <div className={Styles.right_banner}>222</div>
+        <div className={Styles.right_banner}><Slider sliders={bannerData&&bannerData.response.sliders}/></div>
     </div>
 }
 export {Banners}

@@ -7,14 +7,15 @@
 
   .left_banner {
     width: 890px;
-    height: 864px;
+    min-width: 890px;
+    height: 600px;
     background: color(background_gray);
     border-radius: (6px);
     display: flex;
     flex-direction: column;
 
     .insidePadding {
-      padding: 110px 230px 20px 110px;
+      padding: 60px 230px 0 60px;
 
       .title {
         font-weight: 400;
@@ -37,14 +38,19 @@
 
       .block_button {
         display: flex;
-        height: 100%;
         gap: 12px;
         align-items: flex-end;
+        margin: 120px 0 30px;
+
       }
     }
   }
 
   .right_banner {
-    flex: 1;
+    background-color: color(black1);
+    border-radius: (6px);
+    position: relative;
+    overflow: auto;
+
   }
 }

@@ -1,4 +1,5 @@
 const adminPath = "/admin/";
+const imagesBannerPath='/images/banners/'
 const headers = {
   accept: "text/plain'",
   "Content-Type": "application/json",
@@ -7,4 +8,5 @@ const headers = {
 export {
   headers,
   adminPath,
+  imagesBannerPath
 };
