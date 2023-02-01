@@ -25,7 +25,6 @@ const Button: FC<ButtonI> = ({
             } else return onClick(evt);
         };
     const resTheme = theme + '_' + color;
-    console.log("23", resTheme)
     return (
         <button
             {...attrs}
