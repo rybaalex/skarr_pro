@@ -1,5 +1,4 @@
 import {IResponse} from "../../../types/response";
-import {INavItem} from "../../../components/common/header/nav/nav.d";
 
 interface IBannerResponse extends Omit<IResponse, "response"> {
     response: IBannerItem;
@@ -9,7 +8,7 @@ interface IBannerItem {
     description: string;
     offers: IOfferItem[],
     button: IButtonItem[],
-    images: IImagesBannerItem[]
+    sliders: IImagesBannerItem[]
 }
 
 interface IImagesBannerItem {
@@ -17,6 +16,7 @@ interface IImagesBannerItem {
     url: string;
     sort?: number;
     published?: boolean
+    image?: string
 }
 
 interface IButtonItem {
@@ -33,4 +33,4 @@ interface IOfferItem {
     published?: boolean
 }
 
-export {IBannerResponse, IOfferItem, IButtonItem}
+export {IBannerResponse,IBannerItem, IOfferItem, IButtonItem, IImagesBannerItem}
