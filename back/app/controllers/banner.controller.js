@@ -1,10 +1,10 @@
-const NavService = require('../services/nav.service')
+const BannerService = require('../services/banner.service');
 const responseData= require("../config/response");
 
-class NavController {
-    getNavigation = async (res, db) => {
-        const resultDB = await NavService.getNav(db);
-        if (resultDB.length > 0) {
+class BannerController {
+    getBanner = async (res, db) => {
+        const resultDB = await BannerService.getBanner(db);
+        if (resultDB) {
             responseData.response=resultDB
             return res.status(200).send(responseData)
         } else {
@@ -16,4 +16,4 @@ class NavController {
     }
 }
 
-module.exports = new NavController()
+module.exports = new BannerController()

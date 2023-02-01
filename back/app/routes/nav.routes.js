@@ -1,22 +1,6 @@
 const NavController = require('../controllers/nav.controller');
-const nav_name = "/api/v1/nav"
+const router_name = "/api/v1/nav"
 module.exports = function (app, db) {
-    app.post(nav_name, (req, res) => {
-        const note = {
-            url: req.body.alias,
-            title: req.body.title,
-            children: req.body.children,
-            visible: req.body.visible,
-            sort: req.body.sort
-        };
-        db.collection("nav").insertOne(note, (err, result) => {
-            if (err) {
-                res.send({'error': 'An error has occurred'});
-            } else {
-                res.send(result);
-            }
-        });
-    });
 
     /**
      * @swagger
@@ -33,7 +17,7 @@ module.exports = function (app, db) {
      *                 items:
      *
      */
-    app.get(nav_name, (req, res) => {
+    app.get(router_name, (req, res) => {
         NavController.getNavigation(res, db).then();
     })
 };

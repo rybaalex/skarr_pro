@@ -1,7 +1,7 @@
-class NavService {
-    getNav = (db) => {
-        return db.collection("nav").find({published: true}).sort({sort:1}).toArray()
+class BannerService {
+    getBanner = (db) => {
+        return db.collection("banners").findOne()
     }
 }
 
-module.exports = new NavService()
+module.exports = new BannerService()

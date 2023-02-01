@@ -12,7 +12,7 @@ const DB_NAME = process.env.DB_NAME;
 const DB_URL = 'mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASSWORD + '@' + (process.env.NODE_ENV === 'dev' ? process.env.DB_URL_DEV : process.env.DB_URL_PROD) + ':27017/' + DB_NAME
 
 const corsOptions = {
-    origin: APP_URL + ":5000"
+    origin: APP_URL + ":3000"
 };
 
 const app = express()
