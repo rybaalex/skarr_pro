@@ -1,6 +1,9 @@
 $colors: (
         black: #000,
+        black1: #2C2C2C,
+        white1: #FFFFFF,
         border: #e1e1e1,
+        background_gray:  rgba(44, 44, 44, 0.1),
         bredcrumbs_no_link: #BDBDBD,
         bredcrumbs: #7D7D7D,
         bredcrumbs_hover: #BDBDBD,
@@ -14,7 +17,7 @@ $colors: (
         text-hover:#60955B,
         shadow: #a5a5a5,
 );
-
+$button_height: 40px;
 $screenWidth: (
         pc: 1920px,
         tablet: 1300px,
@@ -22,7 +25,6 @@ $screenWidth: (
         phone: 768px,
         SE: 400px,
 );
-
 
 @function screenWidth($key) {
   @return map-get($map: $screenWidth, $key: $key);

@@ -2,25 +2,30 @@
 @import 'styles/variables.scss';
 
 .header {
-  border: 1px solid red;
   display: grid;
-  grid-template-columns:200px 1fr 200px;
+  grid-template-columns:200px 1fr 179px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  background-color: color(black1);
+  padding: 16px;
+  border-radius: (6px);
+  margin-top: 16px;
+  text-transform: uppercase;
 
   &__nav {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    gap: 32px;
+
     align-items: center;
-    padding: 40px 20px;
-    margin-right: 10px;
     transition: all 0.3s;
     text-transform: uppercase;
+    flex: 1;
+    justify-content: flex-end;
+    padding-right: 44px;
 
     a {
-      color: black;
+      color: color(white1);
     }
 
     &_active {
@@ -34,12 +39,6 @@
 
   &__logo {
     max-width: 200px;
-    border: 1px solid blue;
-  }
-
-  &__contacts {
-    border:1px solid green;
-    margin-right: 10px;
   }
 
 }

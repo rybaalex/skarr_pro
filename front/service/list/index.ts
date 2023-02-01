@@ -1,1 +1,1 @@
-export { useGetVacancies } from "./getVacancies";
+export { useGetBanner } from "./getBanner";
