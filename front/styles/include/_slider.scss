@@ -3,6 +3,19 @@
 
 .swiper {
   height: 100%;
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    img{
+      max-height: 100%;
+      height: 100%;
+    }
+  }
 
   .swiper-pagination {
     width: fit-content !important;
@@ -47,7 +60,7 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--swiper-theme-color);
+    color: color(white1);
 
     svg {
       --progress: 0;
@@ -58,7 +71,7 @@
       width: 100%;
       height: 100%;
       stroke-width: 4px;
-      stroke: var(--swiper-theme-color);
+      stroke: color(white1);
       fill: none;
       stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
       stroke-dasharray: 125.6;
@@ -66,13 +79,7 @@
     }
   }
   .swiper-slide {
-    &.swiper-slide-active{
-      box-sizing: (border-box);
-      padding: 50px;
-      img{
-        max-height: 600px;
-        height: 600px;
-      }
-    }
+    box-sizing: (border-box);
+    padding: 50px;
   }
 }
