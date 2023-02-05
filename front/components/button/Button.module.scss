@@ -16,9 +16,10 @@
 
     &:hover {
       transition: all 0.3s;
-      background: #33953A;
-      border-color: #33953A;
-      box-shadow: 0 0 123px rgba(22, 131, 8, 0.6);
+      background: color(black1);
+      border: 1px solid color(white1);
+      color: color(white1);
+      box-shadow: 0 0 123px rgba(255, 255, 255, 0.6);
     }
   }
 

@@ -1,12 +1,16 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
 import navSlice from "components/common/header/nav/NavSlice";
+import bannerSlice from "features/home/banners/BannerSlice";
+import serviceSlice from "features/home/services/ServiceSlice";
 
 
 const makeStore = () =>
   configureStore({
     reducer: {
       [navSlice.name]: navSlice.reducer,
+      [bannerSlice.name]: bannerSlice.reducer,
+      [serviceSlice.name]: serviceSlice.reducer,
 
     },
     devTools: true,

@@ -30,13 +30,13 @@ const SliderContainer: FC<ISlider> = ({sliders}) => {
         mousewheel={{forceToAxis: true, releaseOnEdges: true, sensitivity: 1}}
         modules={[Mousewheel, Pagination, Autoplay]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-         autoplay={{
-             delay: 5000,
-             disableOnInteraction: false,
-         }}
+        autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+        }}
     >
-        {sliders && sliders.map(e => {
-            return (<SwiperSlide><SliderItem {...e}/></SwiperSlide>)
+        {sliders && sliders.map((e, i) => {
+            return (<SwiperSlide key={i}><SliderItem {...e}/></SwiperSlide>)
         })}
 
 
@@ -48,4 +48,4 @@ const SliderContainer: FC<ISlider> = ({sliders}) => {
         </div>
     </Swiper>)
 }
-    export {SliderContainer}
+export {SliderContainer}

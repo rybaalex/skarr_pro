@@ -1,43 +1,43 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import type {AppState, AppThunk} from "store/store";
 import {HYDRATE} from "next-redux-wrapper";
-import {IBannerResponse, IBannerSlice} from "features/home/banners/Banners.d";
+import {IServiceResponse, IServiceSlice} from "features/home/services/Service";
 
-const initialState: IBannerResponse = {
+const initialState: IServiceResponse = {
     customErrorCode: 0,
     systemErrorMessage: "",
     hasError: false,
     errorMessage: "",
-    response: {}
+    response: []
 };
 
-export const bannerSlice = createSlice({
-    name: "bannerState",
+export const serviceSlice = createSlice({
+    name: "serviceState",
     initialState: initialState,
     reducers: {
-        setData: (_state, action: PayloadAction<IBannerSlice>) => {
-            return action.payload.bannerState;
+        setData: (_state, action: PayloadAction<IServiceSlice>) => {
+            return action.payload.serviceState;
         }
     },
     extraReducers: {
-        [HYDRATE]: (state, action: PayloadAction<IBannerSlice>) => {
+        [HYDRATE]: (state, action: PayloadAction<IServiceSlice>) => {
             return {
                 ...state,
-                ...action.payload.bannerState
+                ...action.payload.serviceState
             };
         }
     }
 });
 
-export const fetchBanner =
-    (dispatchData: IBannerSlice): AppThunk =>
+export const fetchService =
+    (dispatchData: IServiceSlice): AppThunk =>
         async (dispatch) => {
-            dispatch(bannerSlice.actions.setData(dispatchData));
+            dispatch(serviceSlice.actions.setData(dispatchData));
         };
 
 /*export const {} =
     factorySlice.actions;*/
 
-export const getBanner = (state: AppState) => state.bannerState;
+export const getService = (state: AppState) => state.serviceState;
 
-export default bannerSlice;
+export default serviceSlice;

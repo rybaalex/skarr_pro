@@ -1,43 +1,43 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { AppState, AppThunk } from "store/store";
-import { HYDRATE } from "next-redux-wrapper";
-import {IBannerResponse, IHomeSlice} from "features/home/banners/Banners.d";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import type {AppState, AppThunk} from "store/store";
+import {HYDRATE} from "next-redux-wrapper";
+import {IBannerResponse, IBannerSlice} from "features/home/banners/Banners.d";
 
 const initialState: IBannerResponse = {
-  customErrorCode: 0,
-  systemErrorMessage: "",
-  hasError: false,
-  errorMessage: "",
-  response: {}
+    customErrorCode: 0,
+    systemErrorMessage: "",
+    hasError: false,
+    errorMessage: "",
+    response: {}
 };
 
-export const homeSlice = createSlice({
-  name: "homeState",
-  initialState: initialState,
-  reducers: {
-    setData: (_state, action: PayloadAction<IHomeSlice>) => {
-      return action.payload.homeState;
+export const bannerSlice = createSlice({
+    name: "bannerState",
+    initialState: initialState,
+    reducers: {
+        setData: (_state, action: PayloadAction<IBannerSlice>) => {
+            return action.payload.bannerState;
+        }
+    },
+    extraReducers: {
+        [HYDRATE]: (state, action: PayloadAction<IBannerSlice>) => {
+            return {
+                ...state,
+                ...action.payload.bannerState
+            };
+        }
     }
-  },
-  extraReducers: {
-    [HYDRATE]: (state, action: PayloadAction<IHomeSlice>) => {
-      return {
-        ...state,
-        ...action.payload.homeState
-      };
-    }
-  }
 });
 
 export const fetchBanner =
-  (dispatchData: IHomeSlice): AppThunk =>
-    async (dispatch) => {
-      dispatch(homeSlice.actions.setData(dispatchData));
-    };
+    (dispatchData: IBannerSlice): AppThunk =>
+        async (dispatch) => {
+            dispatch(bannerSlice.actions.setData(dispatchData));
+        };
 
 /*export const {} =
     factorySlice.actions;*/
 
-export const getBanner = (state: AppState) => state.homeState;
+export const getBanner = (state: AppState) => state.bannerState;
 
-export default homeSlice;
+export default bannerSlice;
