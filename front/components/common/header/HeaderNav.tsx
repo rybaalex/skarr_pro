@@ -9,6 +9,7 @@ import {getMenu} from "components/common/header/nav/NavSlice";
 
 const HeaderNav=()=>{
     const menu = useAppSelector(getMenu);
+    console.log("menu", menu);
     const handleOnClickButton = () => {
         console.log("onClickButton")
     }

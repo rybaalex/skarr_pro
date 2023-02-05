@@ -1,14 +1,14 @@
 import {IResponse} from "../../../types/response";
 
 interface IBannerResponse extends Omit<IResponse, "response"> {
-    response: IBannerItem;
+    response?: IBannerItem;
 }
 
 interface IBannerItem {
-    description: string;
-    offers: IOfferItem[],
-    button: IButtonItem[],
-    sliders: IImagesBannerItem[]
+    description?: string;
+    offers?: IOfferItem[],
+    button?: IButtonItem[],
+    sliders?: IImagesBannerItem[]
 }
 
 interface IImagesBannerItem {
@@ -30,7 +30,12 @@ interface IOfferItem {
     title: string;
     url: string;
     sort?: number;
+    description: string;
     published?: boolean
 }
 
-export {IBannerResponse,IBannerItem, IOfferItem, IButtonItem, IImagesBannerItem}
+interface IBannerSlice {
+    bannerState: IBannerResponse
+}
+
+export {IBannerResponse, IBannerItem, IOfferItem, IButtonItem, IImagesBannerItem, IBannerSlice}

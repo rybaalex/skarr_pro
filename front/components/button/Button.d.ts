@@ -5,6 +5,6 @@ export interface ButtonI {
   disabled?: boolean;
   onClick?: (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   color?: "white" | "black" | "link";
-  theme: "chips"|"square"
+  theme?: "chips"|"square"
   link?: string;
 }
