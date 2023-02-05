@@ -1,4 +1,3 @@
-import {IOfferItem} from "features/home/banners/Banners.d";
 import {FC} from "react";
 import {Button} from "components/button";
 import {Link} from "components/link";
@@ -13,8 +12,8 @@ const ServiceItem: FC<IServiceData> = ({data}) => {
     return (<>
         {data && (<>
                 <div>
-                    <h3>{data[0].title}</h3>
-                    <p>{data[0].description}</p>
+                    <h3>{data[0]?.title}</h3>
+                    <p>{data[0]?.description}</p>
                 </div>
                 <Link url={servicePath}>
                     <Button>get acquainted with the case</Button>

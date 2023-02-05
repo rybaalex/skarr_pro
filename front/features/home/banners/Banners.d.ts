@@ -30,7 +30,7 @@ interface IOfferItem {
     title: string;
     url: string;
     sort?: number;
-    description: string;
+    description?: string;
     published?: boolean
 }
 
