@@ -33,7 +33,7 @@ const ChipsContainer: React.FC<IChipGroup> = ({
     return <div className={Styles.chips_container}>
         <ul>
             {chipsList.map(e => {
-                return <ChipItem {...e}
+                return <ChipItem {...e} key={e.id}
                                  changeFunc={changeFunc}
                                  onClick={(list: IChip) => handleChangeFunc(list)}/>
             })}

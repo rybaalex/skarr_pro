@@ -4,14 +4,13 @@ import Styles from "./Modal.module.scss";
 import {IModalProps} from "./Modal.d";
 import {CloseIcon} from "components/icons";
 
-export const Modal: FC<IModalProps> = ({
+export const ModalContainer: FC<IModalProps> = ({
                                            isShow,
                                            hide,
                                            modalContent,
                                            headerText = "",
                                            theme = "modal",
                                            bgModal = "",
-                                           typeContent = "",
                                        }) => {
     useEffect(() => {
         if (document.body.style.overflow !== "hidden") {
@@ -34,7 +33,7 @@ export const Modal: FC<IModalProps> = ({
               <CloseIcon/>
             </span>
                     </div>
-                    <div className={`${Styles[typeContent]} ${Styles.modal_content} `}>
+                    <div className={`${Styles.modal_content} `}>
                         {modalContent}
                     </div>
                 </div>

@@ -1,2 +1,2 @@
-export { Modal } from "./Modal";
+export { ModalContainer } from "./ModalContainer";
 export { useModal } from "store/hooks/useModal";

@@ -1,0 +1,20 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.text_area_container {
+  margin-top: 30px;
+
+  .text_area_field {
+    border: 1px solid color(chips_bg);
+    width: 100%;
+    color: color(black1);
+    margin-right: 40px;
+    transition: all 0.3s;
+    padding: 10px;
+    box-sizing: border-box;
+
+    &:hover, &:focus {
+      border: 1px solid color(chips_bg_hover);
+    }
+  }
+}

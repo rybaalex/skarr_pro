@@ -1,6 +1,6 @@
 import {FC} from "react";
 import {IButtonItem} from "./Banners.d";
-import {Button} from "components/button";
+import {ButtonContainer} from "components/button";
 
 const ButtonItem: FC<IButtonItem> = (
     {
@@ -9,7 +9,7 @@ const ButtonItem: FC<IButtonItem> = (
     }
 ) => {
     return (
-        <Button color={"black"} theme={"square"} link={url}>{title}</Button>
+        <ButtonContainer color={"black"} theme={"square"} link={url}>{title}</ButtonContainer>
 
     )
 }

@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {Button} from "components/button";
+import {ButtonContainer} from "components/button";
 import {Link} from "components/link";
 import {servicePath} from "utils/bootstrap";
 import {IServiceItem} from "features/home/services/Service";
@@ -16,7 +16,7 @@ const ServiceItem: FC<IServiceData> = ({data}) => {
                     <p>{data[0]?.description}</p>
                 </div>
                 <Link url={servicePath}>
-                    <Button>get acquainted with the case</Button>
+                    <ButtonContainer>get acquainted with the case</ButtonContainer>
                 </Link>
             </>
         )}
