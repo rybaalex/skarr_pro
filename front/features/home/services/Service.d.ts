@@ -5,6 +5,7 @@ interface IServiceResponse extends Omit<IResponse, "response"> {
 }
 
 interface IServiceItem {
+    _id: string,
     title: string;
     url: string;
     published: boolean;

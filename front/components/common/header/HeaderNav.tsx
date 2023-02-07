@@ -6,14 +6,17 @@ import {Button} from "components/button";
 import React from "react";
 import {useAppSelector} from "store/hooks";
 import {getMenu} from "components/common/header/nav/NavSlice";
+import {useModal} from "store/hooks/useModal";
+import {Modal} from "components/modal";
+import {BriefForm} from "components/modal/forms/BriefForm";
 
-const HeaderNav=()=>{
+const HeaderNav = () => {
     const menu = useAppSelector(getMenu);
-    console.log("menu", menu);
+    const {isShow, toggle} = useModal();
     const handleOnClickButton = () => {
-        console.log("onClickButton")
+        toggle();
     }
-   return  <div className={Styles.header}>
+    return <div className={Styles.header}>
         <div className={Styles.header__logo}>
             <Logo/>
         </div>
@@ -23,5 +26,15 @@ const HeaderNav=()=>{
             })}
         </ul>
         <Button onClick={() => handleOnClickButton()}>Contact US</Button>
-    </div>}
+        <Modal
+            isShow={isShow}
+            hide={toggle}
+            modalContent={<BriefForm/>}
+            headerText={"Fill out the brief"}
+            theme={"full_modal"}
+            bgModal={"white"}
+        />
+
+    </div>
+}
 export {HeaderNav}

@@ -13,13 +13,14 @@
     border-radius: (4px);
     transition: all 0.3s;
     padding: 13px 40px 11px;
-
+    white-space: nowrap;
     &:hover {
       transition: all 0.3s;
       background: color(black1);
       border: 1px solid color(white1);
       color: color(white1);
       box-shadow: 0 0 123px rgba(255, 255, 255, 0.6);
+
     }
   }
 

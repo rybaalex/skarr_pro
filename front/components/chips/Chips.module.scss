@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.chips_container {
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    text-transform: uppercase;
+
+    .chip_container {
+      padding: 5px 25px;
+      border-radius: (30px);
+      background-color: color(chips_bg);
+      transition: all 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        color: color(black1);
+        background-color: color(chips_bg_hover);
+      }
+
+      &.active {
+        background-color: color(black1);
+        color: color(white1);
+      }
+
+      &.disabled {
+
+      }
+    }
+  }
+}

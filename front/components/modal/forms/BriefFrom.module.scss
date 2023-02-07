@@ -1,0 +1,16 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.brief_container {
+  padding-left: 40px;
+  p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+  .services{
+    margin-top: 50px;
+    font-size: 30px;
+    color: color(black1);
+  }
+}
