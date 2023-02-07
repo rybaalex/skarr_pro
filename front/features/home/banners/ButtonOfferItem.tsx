@@ -1,6 +1,6 @@
 import {FC} from "react";
 import {IOfferItem} from "./Banners.d";
-import {Button} from "components/button";
+import {ButtonContainer} from "components/button";
 import {servicePath} from "utils/bootstrap";
 
 const ButtonOfferItem: FC<IOfferItem> = (
@@ -10,7 +10,7 @@ const ButtonOfferItem: FC<IOfferItem> = (
     }
 ) => {
     return (
-        <Button color={"black"} theme={"chips"} link={servicePath+url}>{title}</Button>
+        <ButtonContainer color={"black"} theme={"chips"} link={servicePath+url}>{title}</ButtonContainer>
 
     )
 }

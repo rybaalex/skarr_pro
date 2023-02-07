@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import Styles from "./CheckBox.module.scss";
 import { ICheckBox } from "./CheckBox";
 
-const CheckboxWithLabel: FC<ICheckBox> = ({
+const CheckBoxContainer: FC<ICheckBox> = ({
   title = "",
   classCheck = "",
   name = "checkbox",
@@ -41,4 +41,4 @@ const CheckboxWithLabel: FC<ICheckBox> = ({
   );
 };
 
-export { CheckboxWithLabel };
+export { CheckBoxContainer };

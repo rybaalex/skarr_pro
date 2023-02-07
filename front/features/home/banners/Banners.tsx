@@ -2,7 +2,7 @@ import {FC, useEffect} from "react";
 import Styles from "./Banners.module.scss"
 import {ButtonOfferItem} from "features/home/banners/ButtonOfferItem";
 import {ButtonItem} from "features/home/banners/ButtonItem";
-import {Slider} from "components/slider";
+import {Slider} from "components";
 import {useAppSelector} from "store/hooks";
 import {getBanner} from "features/home/banners/BannerSlice";
 import {filter_publish} from "utils/helpers";

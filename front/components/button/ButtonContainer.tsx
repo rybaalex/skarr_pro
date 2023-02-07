@@ -5,17 +5,17 @@ import {ButtonI} from "./Button.d";
 
 import Styles from "./Button.module.scss";
 
-const Button: FC<ButtonI> = ({
-                                 children,
-                                 type = "button",
-                                 disabled = false,
-                                 onClick = () => {
-                                 },
-                                 color = "white",
-                                 theme = 'square',
-                                 link,
-                                 ...attrs
-                             }) => {
+const ButtonContainer: FC<ButtonI> = ({
+                                          children,
+                                          type = "button",
+                                          disabled = false,
+                                          onClick = () => {
+                                          },
+                                          color = "white",
+                                          theme = 'square',
+                                          link,
+                                          ...attrs
+                                      }) => {
     const router = useRouter();
 
     const onClickBtn =
@@ -38,4 +38,4 @@ const Button: FC<ButtonI> = ({
     );
 };
 
-export {Button};
+export {ButtonContainer};

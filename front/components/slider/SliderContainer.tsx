@@ -1,5 +1,4 @@
 import React, {FC, useRef} from "react";
-// Import Swiper React components
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination, Mousewheel, Autoplay} from "swiper";
 

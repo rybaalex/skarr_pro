@@ -2,12 +2,12 @@ import Styles from "components/common/header/Header.module.scss";
 import {Logo} from "components/common/header/logo/Logo";
 import {INavItem} from "components/common/header/nav/nav.d";
 import {NavItem} from "components/common/header/nav/NavItem";
-import {Button} from "components/button";
+import {ButtonContainer} from "components/button";
 import React from "react";
 import {useAppSelector} from "store/hooks";
 import {getMenu} from "components/common/header/nav/NavSlice";
 import {useModal} from "store/hooks/useModal";
-import {Modal} from "components/modal";
+import {ModalContainer} from "components/modal";
 import {BriefForm} from "components/modal/forms/BriefForm";
 
 const HeaderNav = () => {
@@ -25,8 +25,8 @@ const HeaderNav = () => {
                 return (<NavItem {...e} key={e._id}/>);
             })}
         </ul>
-        <Button onClick={() => handleOnClickButton()}>Contact US</Button>
-        <Modal
+        <ButtonContainer onClick={() => handleOnClickButton()}>Contact US</ButtonContainer>
+        <ModalContainer
             isShow={isShow}
             hide={toggle}
             modalContent={<BriefForm/>}
