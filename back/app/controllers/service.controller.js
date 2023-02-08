@@ -3,7 +3,6 @@ const responseData= require("../config/response");
 class ServiceController {
     getService = async (res, db) => {
         const resultDB = await ServiceService.getService(db);
-        console.log("-------------------", resultDB)
         if (resultDB) {
             responseData.response=resultDB
             return res.status(200).send(responseData)

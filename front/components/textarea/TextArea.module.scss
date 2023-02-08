@@ -3,18 +3,54 @@
 
 .text_area_container {
   margin-top: 30px;
+  position: relative;
+  transition: all 0.3s;
 
   .text_area_field {
-    border: 1px solid color(chips_bg);
+    max-height: 1000px;
+    font-size: 16px;
+    padding: 15px;
+    outline: none;
+    resize: none;
     width: 100%;
     color: color(black1);
     margin-right: 40px;
-    transition: all 0.3s;
-    padding: 10px;
     box-sizing: border-box;
+    word-wrap: break-word;
+    line-height: 1.5;
+    border: 1px solid color(chips_bg);
+    transition: all 0.3s;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
 
     &:hover, &:focus {
       border: 1px solid color(chips_bg_hover);
+      transition: all 0.3s;
     }
+
+    &:focus ~ label {
+      transition: all 0.3s;
+      top: -20px;
+      left: 0;
+      font-size: 12px;
+    }
+
+    &:not(:placeholder-shown)~label {
+      transition: all 0.3s;
+      top: -20px;
+      left: 0;
+      font-size: 12px;
+    }
+  }
+
+  .label_style {
+    color: color(text_area_plh);
+    font-weight: 100;
+    position: absolute;
+    top: 19px;
+    left: 15px;
+    z-index: 1;
   }
 }

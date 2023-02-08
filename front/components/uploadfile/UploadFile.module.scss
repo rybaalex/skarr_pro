@@ -1,6 +1,51 @@
-.upload_file_container{
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.upload_file_container {
   margin: 10px 0;
-    .upload_input_style {
-      display: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  .upload_input_style {
+    display: none;
+  }
+
+  .selected_file {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .deleted_files {
+      cursor: pointer;
+      display: flex;
+      svg{
+        path{
+          transition: all 0.5s;
+        }
+      }
+      &:hover{
+        svg{
+          path{
+            fill: red;
+            transition: all 0.5s;
+          }
+        }
+      }
     }
   }
+
+  .upload_input_item {
+    background-color: color(chips_bg);
+    max-width: fit-content;
+    padding: 5px 30px;
+    border-radius: (30px);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: color(chips_bg_hover);
+
+    }
+  }
+}

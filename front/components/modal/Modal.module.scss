@@ -37,6 +37,7 @@
     background-color: color(white1);
     border-bottom: 1px solid color(border);
     align-items: center;
+    z-index: 10;
 
     &_title {
       font-size: 36px;
@@ -54,6 +55,7 @@
       svg {
         path {
           fill: color(error);
+          transition: all 0.5s;
         }
       }
     }
@@ -61,6 +63,7 @@
     svg {
       path {
         fill: color(black1);
+        transition: all 0.5s;
       }
     }
   }
