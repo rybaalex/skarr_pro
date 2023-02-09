@@ -10,19 +10,25 @@
     max-width: 500px;
   }
 
-  .title_block {
-    margin-top: 70px;
-    font-size: 30px;
-    color: color(black1);
-  }
+  .block_item {
+    margin-top: 50px;
 
-  .item {
-    &__input {
+    .title {
+      font-size: 30px;
+      margin-bottom: 30px;
       color: color(black1);
-
-      &_error {
-        color: color(error);
-      }
+    }
+    .upload_block{
+      margin: 10px 0;
+    }
+    .contacts_container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 40px;
     }
   }
+
+
 }

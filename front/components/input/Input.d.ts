@@ -6,6 +6,8 @@ interface IInput {
     defaultValue?: string
     placeholder?: string;
     name: string
+    customClass?: string
+    titleLabel?: string
 }
 
 export {IInput}

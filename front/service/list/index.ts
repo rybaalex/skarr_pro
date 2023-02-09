@@ -1,1 +1,2 @@
-export { useGetBanner } from "./getBanner";
+export {useGetBanner} from "./getBanner";
+export {useGetRecommendations} from "./getRecommendations";

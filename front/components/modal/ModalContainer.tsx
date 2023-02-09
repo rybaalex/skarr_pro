@@ -5,20 +5,22 @@ import {IModalProps} from "./Modal.d";
 import {CloseIcon} from "components/icons";
 
 export const ModalContainer: FC<IModalProps> = ({
-                                           isShow,
-                                           hide,
-                                           modalContent,
-                                           headerText = "",
-                                           theme = "modal",
-                                           bgModal = "",
-                                       }) => {
+                                                    isShow,
+                                                    hide,
+                                                    modalContent,
+                                                    headerText = "",
+                                                    theme = "modal",
+                                                    bgModal = "",
+                                                }) => {
     useEffect(() => {
-        if (document.body.style.overflow !== "hidden") {
+        if (isShow) {
             document.body.style.overflow = "hidden";
+            document.body.style.marginRight = "17px"
         } else {
             document.body.style.overflow = "auto";
+            document.body.style.marginRight = "0";
         }
-    })
+    }, [isShow])
 
     const modal = (
         <div className={`${Styles.modal} ${Styles[bgModal]}`}>

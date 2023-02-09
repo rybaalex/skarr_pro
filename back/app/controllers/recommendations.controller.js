@@ -1,8 +1,8 @@
-const ServiceService = require('../services/service.service');
+const RecommendationsService = require('../services/recommendations.service');
 const responseData= require("../config/response");
-class ServiceController {
-    getService = async (res, db) => {
-        const resultDB = await ServiceService.getService(db);
+class RecommendationsController {
+    getRecommendations = async (res, db) => {
+        const resultDB = await RecommendationsService.getRecommendations(db);
         if (resultDB) {
             responseData.response=resultDB
             return res.status(200).send(responseData)
@@ -15,4 +15,4 @@ class ServiceController {
     }
 }
 
-module.exports = new ServiceController()
+module.exports = new RecommendationsController()
