@@ -7,63 +7,54 @@
     {
       "title": "UX/UI",
       "url": "uxui",
-      "description": "xnj nj ghjdsf dfsdfa d adsf as",
       "published": true,
       "sort": 10
     },
     {
-      "title": "PRODUCT",
+      "title": "subject photography",
       "url": "product",
-      "description": "dfdsf df dsf ds sad",
       "published": true,
       "sort": 20
     },
     {
       "title": "DASHBOARD",
       "url": "dashboard",
-      "description": "dfdsfa dsf dsfdknf d fasldf ljdsfj",
       "published": true,
       "sort": 30
     },
     {
       "title": "graphic design",
       "url": "graphicdegisn",
-      "description": "dfsdfsd df  sdfjhdlfadslfjdbf",
       "published": true,
       "sort": 40
     },
     {
       "title": "Mobile interface",
       "url": "mobileinterfaces",
-      "description": "dsafkj ;fhdslf sdljfdlsnfkdjf",
       "published": true,
       "sort": 50
     },
     {
-      "title": "web app",
+      "title": "mobile app",
       "url": "webapp",
-      "description": "jdshf saljf dsbfdkbflfdndaklbjfabn",
       "published": true,
       "sort": 60
     },
     {
       "title": "branding",
       "url": "branding",
-      "description": "gfjg gfjf jjvvjc  cjggcvhjcv jcg v v ccvkv",
       "published": true,
       "sort": 70
     },
     {
       "title": "industrial photography",
       "url": "industrialphotography",
-      "description": "jhd fdksf kdfdbflfl hd hfdj bbglbflhdgbf",
-      "published": true,
+      "published": false,
       "sort": 80
     },
     {
       "title": "website development",
       "url": "websitedevelopment",
-      "description": "dfjg akdgfdkghf dkgfkdgh fkdvfkhdsf",
       "published": true,
       "sort": 90
     }
@@ -71,11 +62,15 @@
   "button": [
     {
       "title": "HIRE US",
-      "url": "hireus"
+      "url": "hireus",
+      "published": true,
+      "sort": 10
     },
     {
       "title": "Our cases",
-      "url": "cases"
+      "url": "cases",
+      "published": true,
+      "sort": 20
     }
   ],
   "sliders": [

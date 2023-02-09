@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "63dde2ede6a9fe53807a312f"
+  },
+  "title": "Web",
+  "url": "web",
+  "description": "We will develop a website that will not only have an attractive appearance, but will also be thought out from the point of view of its usability. We think over the user's path to ensure maximum conversion.",
+  "position": 1,
+  "published": true
+},{
+  "_id": {
+    "$oid": "63dde35fe6a9fe53807a3130"
+  },
+  "title": "mobile",
+  "url": "mobile",
+  "description": "We are engaged in the creation of complex web services and the development of mobile applications. Our qualifications allow us to solve non-standard tasks.",
+  "position": 2,
+  "published": true
+},{
+  "_id": {
+    "$oid": "63dde37ae6a9fe53807a3131"
+  },
+  "title": "Graphic",
+  "url": "graphic",
+  "description": "We do only unique web design - taking into account the goals and objectives of the company and a well–thought-out development strategy.",
+  "position": 3,
+  "published": true
+},{
+  "_id": {
+    "$oid": "63dde39de6a9fe53807a3132"
+  },
+  "title": "Branding",
+  "url": "branding",
+  "description": "Branding is not limited to creating visual images – a logo, a corporate identity. This is a serious work on developing a brand development strategy, naming, design of advertising media and even the interior.",
+  "position": 4,
+  "published": true
+}]

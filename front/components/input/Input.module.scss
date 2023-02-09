@@ -1,0 +1,45 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.input_container {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  input {
+    border: none;
+    border-bottom: 1px solid color(chips_bg);
+    padding: 10px 0;
+    width: 100%;
+    transition: all 0.3s;
+    &:not(:placeholder-shown)~label {
+      transition: all 0.3s;
+      top: -20px;
+      left: 15px;
+      font-size: 12px;
+    }
+    &:focus, &:hover {
+      transition: all 0.3s;
+      border-bottom: 1px solid color(chips_bg_hover);
+    }
+
+    &:focus {
+      transition: all 0.3s;
+
+      & + label {
+        top: -10px;
+        transition: all 0.3s;
+        font-size: 12px;
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    color: color(text_area_plh);
+    font-size: 16px;
+    top: 10px;
+    transition: all 0.3s;
+    font-weight: 100;
+  }
+}

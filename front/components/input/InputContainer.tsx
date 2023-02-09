@@ -8,17 +8,22 @@ const InputContainer: FC<IInput> = ({
                                         placeholder = '',
                                         value = '',
                                         defaultValue = '',
-                                        name = 'input'
+                                        name = 'input',
+                                        customClass = '',
+                                        titleLabel = ''
                                     }) => {
     return <div className={Styles.input_container}>
         <input
             type={type}
+            id={name}
             onClick={onClick}
             placeholder={placeholder}
             defaultValue={defaultValue}
             value={value}
             name={name}
+            className={customClass}
         />
+        {titleLabel && <label htmlFor={name}>{titleLabel}</label>}
     </div>
 }
 

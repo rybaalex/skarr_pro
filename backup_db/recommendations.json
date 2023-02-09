@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "63e4aabefdf26e6e87550142"
+  },
+  "title": "rating",
+  "count": 0
+},{
+  "_id": {
+    "$oid": "63e4ab0cfdf26e6e87550143"
+  },
+  "title": "recommendations",
+  "count": 0
+},{
+  "_id": {
+    "$oid": "63e4ab62fdf26e6e87550144"
+  },
+  "title": "works",
+  "count": 0
+},{
+  "_id": {
+    "$oid": "63e4b61efdf26e6e87550146"
+  },
+  "title": "media",
+  "count": 0
+},{
+  "_id": {
+    "$oid": "63e4b64dfdf26e6e87550147"
+  },
+  "title": "social network",
+  "count": 0
+}]
